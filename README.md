@@ -34,7 +34,7 @@ Our project is basically understanding how we can do DNA sequencing using ML, DL
 We have imported a few libraries like NumPy, pandas, and matplotlib. The data is called human_data.txt, this data set we have downloaded from Kaggle. Now after running this data set, we got the human DNA sequence and their class. Basically, now we have sequence and class. Now when we read this particular dataset, based on the sequence it should be able to predict to what class the sequence belongs to. Now this sequence may be the gene sequence or a DNA sequence of a particular human being and they are basically classified into various classes. And apart from this particular data set we also have some data set for chimpanzee data and dog data which we got it from Kaggle itself and these data sets will also be having the same thing which is called a sequence and a class.
 
  ![image](https://user-images.githubusercontent.com/99421940/204093088-31a0a484-0f8c-4331-bf10-54c43f4a8f18.png)
-Fig 7.1: Gene Family
+#Fig 1: Gene Family
 
 This is basically a gene family, if a particular sequence belongs to class 0 then it means that it belongs to the g protein-coupled receptors gene family, this number basically shows that class label 0 is present on 531 and so on, we just retrieved it and just saw what all this class is, and this is about gene family. 
 
@@ -43,10 +43,23 @@ We have used k-mer counting. When we are working with DNA sequencing or transcri
 Next, this particular data set will be converted into 6 sets of words, and each word of length 6. We have done this because then only we can apply count of words or bag of words for this particular data. We have done chimpanzee data and dog data. Next, we need to convert the list of k-mers for each gene into string sentences. So now we need to combine all the sequences together because once we combine them it becomes very easy for us to convert into a bag of words. Till here the same steps will be followed to chimpanzee and dog data. We will do this later. Next what we will do is that we try to convert the strings by applying bag of words by using count vectorizer. Sir we do this because we have our independent feature in the form of strings, and in NLP we cannot use data key strings directly to our model, so for this we convert the strings into bag of words using count vectorizer. Now what we do is that we check whether my data set is balanced or not, so for that I'm just finding and trying to see my human data value counts. 
 
 ![image](https://user-images.githubusercontent.com/99421940/204093143-eae5cff2-b84a-44f1-91da-566b6adfc338.png)
-Fig 7.2: Class Balance of Human
+#Fig 2: Class Balance of Human
  
 ![image](https://user-images.githubusercontent.com/99421940/204093160-61ec876c-ca32-4964-8863-d14bb5e86e5d.png)
-Fig 7.3: Class Balance of Chimpanzee and Dog
+#Fig 3: Class Balance of Chimpanzee and Dog
 
 Now you can see over here it is very precisely all the classes are approximately balanced. Some of the datasets are low but other classes are approximately balanced so we can basically use this directly and we don't have to handle if we have the problem of the imbalanced dataset. If there is an imbalanced dataset problem then you can do oversampling. now we are doing the Train test split and I'm taking 20% as my test size. Next, we applied all our classification algorithms to our three datasets to check the accuracy. These classification algorithms are estimated using different classification metrics. All these mentioned metrics are estimated from the confusion matrix. The model performs well on human data. It also does on Chimpanzee. This is not surprising as we already know that man and chimpanzees are genetically related. But the model when used for dog data did not show good results as both man and dog are not much related to each other.
+
+#5. RESULTS & DISCUSSIONS: 
+
+This project is about basically understanding how we can do DNA sequencing using Deep Learning, Machine Learning techniques, and algorithms. Three datasets namely human, chimpanzee, and dog data sets have been taken from Kaggle. The datasets consist of sequences and labels and each Dataset is divided into a training and testing ratio of 80%, 20% for ML algorithms, and 75%, 25% respectively for DL algorithms. And we have done DNA sequencing for these datasets and have applied five different classification algorithms from both machine learning and deep learning namely Decision tree, Random Forest, Naive Bayes, CNN and Transform Learning. We have used Label encoding, k-mer encoding, and one-hot encoding for sequence encoding. For machine learning algorithms we have used k-mer encoding and for deep learning, we have used one-hot and label encoding.
+
+For each data set in machine learning, we converted these DNA sequences as languages, and in order to convert those into languages we used this k-mer counting technique and k-mer size of 6. Then we converted the list of k-mers for each gene into string sentences and also converted the strings by applying bag of words by using count vectorizer. For each data set in deep learning, we have used one-hot and label encoding. These classification algorithms are estimated using different classification metrics. All these mentioned metrics are estimated from the CM. The CM of both label encoding (DL algorithms) and k-mer counting (ML algorithms) for DNA sequencing is shown in the below Figure.  
+
+![image](https://user-images.githubusercontent.com/99421940/204093323-8a74546a-b9de-4d38-880f-fe6c93716dbd.png)
+#Fig 4: Confusion matrix of k-mer encoding
+
+
+
+
 
