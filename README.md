@@ -32,9 +32,10 @@ Our project is basically understanding how we can do DNA sequencing using ML, DL
 
 We have imported a few libraries like NumPy, pandas, and matplotlib. The data is called human_data.txt, this data set we have downloaded from Kaggle. Now after running this data set, we got the human DNA sequence and their class. Basically, now we have sequence and class. Now when we read this particular dataset, based on the sequence it should be able to predict to what class the sequence belongs to. Now this sequence may be the gene sequence or a DNA sequence of a particular human being and they are basically classified into various classes. And apart from this particular data set we also have some data set for chimpanzee data and dog data which we got it from Kaggle itself and these data sets will also be having the same thing which is called a sequence and a class.
 
- ![image](https://user-images.githubusercontent.com/99421940/204093038-9a89e58e-89e4-47bc-9740-1b2b09a5ac49.png)
+ ![image](https://user-images.githubusercontent.com/99421940/204093088-31a0a484-0f8c-4331-bf10-54c43f4a8f18.png)
 
-Fig 7.1: Gene Family
+
+                                                Fig 7.1: Gene Family
 
 This is basically a gene family, if a particular sequence belongs to class 0 then it means that it belongs to the g protein-coupled receptors gene family, this number basically shows that class label 0 is present on 531 and so on, we just retrieved it and just saw what all this class is, and this is about gene family. 
 
